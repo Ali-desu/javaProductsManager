@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gestionproduits.controllers.produitController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Noveau Produit" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="nameField" promptText="Nom" />
+
+    <TextField fx:id="priceField" promptText="Prix" />
+
+    <TextArea fx:id="descriptionArea" promptText="Description" prefRowCount="3" />
+
+    <HBox alignment="CENTER_LEFT" spacing="5">
+        <ComboBox fx:id="commercialComboBox" prefWidth="150">
+        </ComboBox>
+        <Label text="(Commercial)" />
+    </HBox>
+
+    <Button text="Ajouter" fx:id="addButton" prefWidth="100" onAction="#handleAddProduct"/>
+    <Label fx:id="status" />
+
+</VBox>
